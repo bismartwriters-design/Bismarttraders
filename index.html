@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BISMARTTRADERS trading dashboard demo">
+  <title>BISMARTTRADERS — Trading Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="auth-screen" id="authScreen">
+    <div class="auth-card">
+      <a class="brand" href="#"><span class="brand-mark">P</span>BISMARTTRADERS</a>
+      <div class="auth-copy">
+        <p class="eyebrow">YOUR MARKETS, YOUR DASHBOARD</p>
+        <h1 id="authTitle">Welcome back</h1>
+        <p id="authSubtitle">Log in to view your trading dashboard.</p>
+      </div>
+      <form id="authForm">
+        <div id="nameField" class="field hidden">
+          <label for="fullName">Full name</label>
+          <input id="fullName" type="text" placeholder="Your name" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" type="email" placeholder="you@example.com" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="At least 6 characters" required minlength="6" autocomplete="current-password">
+        </div>
+        <p class="form-error" id="authError" role="alert"></p>
+        <button class="primary-btn full" id="authSubmit" type="submit">Log in</button>
+      </form>
+      <p class="switch-copy"><span id="switchText">New to BISMARTTRADERS?</span> <button class="text-btn" id="switchMode" type="button">Create an account</button></p>
+      <p class="demo-note">Demo account data stays in this browser only. Do not use a real password.</p>
+    </div>
+    <div class="auth-art">
+      <div class="art-glow"></div>
+      <div class="art-content">
+        <span class="live-pill"><i></i> MARKET OVERVIEW</span>
+        <h2>Make informed moves.<br><em>Stay in control.</em></h2>
+        <p>A clean space to follow markets, review your portfolio and practise your trading workflow.</p>
+        <div class="mini-chart">
+          <div class="chart-top"><span>Portfolio performance</span><strong>+8.24%</strong></div>
+          <svg viewBox="0 0 520 160" preserveAspectRatio="none" aria-label="Illustrative rising chart">
+            <defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#39d6a1" stop-opacity=".28"/><stop offset="1" stop-color="#39d6a1" stop-opacity="0"/></linearGradient></defs>
+            <path d="M0 132 C35 118 45 126 72 105 S115 115 140 89 S180 100 205 75 S250 91 276 65 S315 78 345 49 S390 66 420 35 S470 42 520 10 V160 H0Z" fill="url(#fill)"/>
+            <path d="M0 132 C35 118 45 126 72 105 S115 115 140 89 S180 100 205 75 S250 91 276 65 S315 78 345 49 S390 66 420 35 S470 42 520 10" fill="none" stroke="#39d6a1" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="app hidden" id="app">
+    <aside class="sidebar">
+      <a class="brand" href="#"><span class="brand-mark">P</span>BISMARTTRADERS</a>
+      <p class="nav-label">WORKSPACE</p>
+      <nav>
+        <a class="nav-link active" href="#overview"><span>▦</span> Overview</a>
+        <a class="nav-link" href="#markets"><span>⌁</span> Markets</a>
+        <a class="nav-link" href="#portfolio"><span>◫</span> Portfolio</a>
+        <a class="nav-link" href="#activity"><span>↕</span> Activity</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-box"><strong>Need a hand?</strong><p>Explore the demo dashboard and its features.</p></div>
+        <button class="nav-link logout" id="logoutBtn"><span>↪</span> Log out</button>
+      </div>
+    </aside>
+
+    <section class="main-area">
+      <header class="topbar">
+        <div><p class="eyebrow">MONDAY, NOVEMBER 23, 2026</p><h1>Dashboard</h1></div>
+        <div class="profile"><div class="avatar" id="avatar">U</div><div><strong id="userName">User</strong><small id="userEmail">user@example.com</small></div></div>
+      </header>
+
+      <section class="welcome-row">
+        <div><h2>Good to see you, <span id="welcomeName">there</span> 👋</h2><p>Here’s your market snapshot for today.</p></div>
+        <span class="demo-tag">SIMULATED DATA</span>
+      </section>
+
+      <section class="stats-grid" id="overview">
+        <article class="stat-card"><div class="stat-head"><span>Demo account balance</span><span class="stat-icon">◈</span></div><h2>$25,000.00</h2><p class="muted">Starting demo balance</p></article>
+        <article class="stat-card"><div class="stat-head"><span>Today's demo change</span><span class="stat-icon">↗</span></div><h2 class="positive">+$324.50</h2><p class="positive small">+1.32% <span class="muted">simulated</span></p></article>
+        <article class="stat-card"><div class="stat-head"><span>Open positions</span><span class="stat-icon">▤</span></div><h2>04</h2><p class="muted">Example positions</p></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel chart-panel" id="markets">
+          <div class="panel-heading"><div><h3>Market watch</h3><p>Illustrative market prices</p></div><span class="period">24H</span></div>
+          <div class="chart-summary"><strong>$25,324.50</strong><span class="positive">↗ 1.32%</span></div>
+          <div class="chart-labels"><span>Portfolio value (demo)</span><span>Last 7 days</span></div>
+          <svg class="big-chart" viewBox="0 0 700 230" preserveAspectRatio="none" role="img" aria-label="Illustrative portfolio line chart">
+            <defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#20b486" stop-opacity=".2"/><stop offset="1" stop-color="#20b486" stop-opacity="0"/></linearGradient></defs>
+            <g class="grid-lines"><path d="M0 30H700 M0 85H700 M0 140H700 M0 195H700"/></g>
+            <path d="M0 180 C40 160 55 174 95 145 S145 164 190 122 S245 143 285 110 S335 132 380 90 S430 108 475 78 S530 93 570 52 S630 70 700 20 V230 H0Z" fill="url(#area)"/>
+            <path d="M0 180 C40 160 55 174 95 145 S145 164 190 122 S245 143 285 110 S335 132 380 90 S430 108 475 78 S530 93 570 52 S630 70 700 20" fill="none" stroke="#20b486" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <div class="axis"><span>17 Nov</span><span>18 Nov</span><span>19 Nov</span><span>20 Nov</span><span>21 Nov</span><span>22 Nov</span><span>23 Nov</span></div>
+        </article>
+
+        <article class="panel watch-panel">
+          <div class="panel-heading"><div><h3>Popular assets</h3><p>Sample prices, not live quotes</p></div><span class="more">•••</span></div>
+          <div class="asset-row"><div class="coin btc">₿</div><div class="asset-name"><strong>Bitcoin</strong><small>BTC / USD</small></div><strong>$67,420.80</strong><span class="positive">+2.4%</span></div>
+          <div class="asset-row"><div class="coin eth">◆</div><div class="asset-name"><strong>Ethereum</strong><small>ETH / USD</small></div><strong>$3,520.15</strong><span class="positive">+1.8%</span></div>
+          <div class="asset-row"><div class="coin sol">S</div><div class="asset-name"><strong>Solana</strong><small>SOL / USD</small></div><strong>$148.62</strong><span class="negative">-0.6%</span></div>
+          <div class="asset-row"><div class="coin xrp">X</div><div class="asset-name"><strong>XRP</strong><small>XRP / USD</small></div><strong>$0.6241</strong><span class="positive">+0.9%</span></div>
+        </article>
+      </section>
+
+      <section class="panel positions-panel" id="portfolio">
+        <div class="panel-heading"><div><h3>Example positions</h3><p>These are fictional sample holdings</p></div><button class="outline-btn" id="refreshBtn">↻ Refresh demo</button></div>
+        <div class="table-wrap"><table><thead><tr><th>ASSET</th><th>TYPE</th><th>AMOUNT</th><th>ENTRY PRICE</th><th>MARK PRICE</th><th>RETURN</th></tr></thead>
+          <tbody><tr><td><strong>Bitcoin</strong><small>BTC</small></td><td>Crypto</td><td>0.120 BTC</td><td>$64,200</td><td>$67,420</td><td class="positive">+$386.40</td></tr>
+          <tr><td><strong>Ethereum</strong><small>ETH</small></td><td>Crypto</td><td>1.50 ETH</td><td>$3,410</td><td>$3,520</td><td class="positive">+$165.00</td></tr>
+          <tr><td><strong>Gold</strong><small>XAU</small></td><td>Commodity</td><td>2.00 oz</td><td>$2,040</td><td>$2,025</td><td class="negative">-$30.00</td></tr>
+          <tr><td><strong>Apple</strong><small>AAPL</small></td><td>Stock</td><td>5 shares</td><td>$190.00</td><td>$194.20</td><td class="positive">+$21.00</td></tr></tbody>
+        </table></div>
+      </section>
+      <footer id="activity">BISMARTTRADERS demo • Prices and balances are illustrative only. No real trades are placed.</footer>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
